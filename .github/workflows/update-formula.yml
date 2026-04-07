@@ -38,10 +38,10 @@ jobs:
             exit 1
           fi
 
-          # Update URL
-          sed -i "s|url \".*\"|url \"${SDIST_URL}\"|" "$FORMULA_FILE"
-          # Update SHA256
-          sed -i "s|sha256 \".*\"|sha256 \"${SDIST_SHA256}\"|" "$FORMULA_FILE"
+          # Update only the main package URL and SHA256 (first occurrence)
+          # Using sed with line-address to avoid clobbering resource blocks
+          sed -i "0,/^  url \".*\"/{s|url \".*\"|url \"${SDIST_URL}\"|}" "$FORMULA_FILE"
+          sed -i "0,/^  sha256 \".*\"/{s|sha256 \".*\"|sha256 \"${SDIST_SHA256}\"|}" "$FORMULA_FILE"
 
           echo "Updated $FORMULA_FILE:"
           grep -E '(url|sha256) ' "$FORMULA_FILE"
