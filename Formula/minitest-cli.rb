@@ -3,8 +3,8 @@ class MinitestCli < Formula
 
   desc "CLI tool for Minitap testing workflows"
   homepage "https://github.com/minitap-ai/minitest-cli"
-  url "https://files.pythonhosted.org/packages/ff/91/6c6932936c51249034024f01871fec8ddf4a8f80fc6a7224e949f9da926f/minitest_cli-0.8.2.tar.gz"
-  sha256 "a34ce78c46cf6ebe936c06f8e930f64db9e171308ba3234dd819eea43d3f8cb9"
+  url "https://files.pythonhosted.org/packages/5e/c5/eb85f034306f2686401b587dd0f304e95f1a18c67b871ae511d85ec35ea6/minitest_cli-0.8.3.tar.gz"
+  sha256 "703e43060ac5b641569c99584099c5a2132c65f58ab6ae1857cf64037980e9db"
   license "MIT"
 
   depends_on "maturin" => :build
