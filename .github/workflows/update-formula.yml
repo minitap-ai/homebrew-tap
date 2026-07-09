@@ -23,7 +23,7 @@ jobs:
           echo "Updating ${{ github.event.client_payload.formula }} to v${{ github.event.client_payload.version }}"
 
       - name: Checkout tap
-        uses: actions/checkout@v5
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7
 
       - name: Update formula
         env:
