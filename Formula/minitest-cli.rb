@@ -7,6 +7,9 @@ class MinitestCli < Formula
   sha256 "c907ab7723bbdb3c9e37b5a06ee81f03ddb2c35f1492a7a57f7c177b7db336bd"
   license "MIT"
 
+  disable! date:    "2026-10-28",
+           because: "is no longer published here: run `brew uninstall minitest-cli && uv tool install minitest-cli`"
+
   depends_on "maturin" => :build
   depends_on "rust" => :build
   depends_on "python@3.12"

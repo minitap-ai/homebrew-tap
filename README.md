@@ -1,26 +1,23 @@
 # Homebrew Tap for Minitap
 
-Homebrew formulae for [Minitap](https://github.com/minitap-ai) CLI tools.
+Homebrew formulae and casks for [Minitap](https://github.com/minitap-ai) tools.
 
-## Install
+## minitest-cli has moved to uv
 
-```bash
-brew install minitap-ai/tap/minitest-cli
-```
-
-Or add the tap first:
+`minitest-cli` is no longer published through Homebrew: the formula here is
+frozen at 0.24.0 and disabled. Install the current CLI with uv instead (it
+keeps itself up to date):
 
 ```bash
-brew tap minitap-ai/tap
-brew install minitest-cli
+brew uninstall minitest-cli   # if you installed it from this tap
+uv tool install minitest-cli
 ```
 
-## Available Formulae
+See the [minitest-cli README](https://github.com/minitap-ai/minitest-cli#installation)
+for the one-line installer.
 
-| Formula | Description |
-|---------|-------------|
-| `minitest-cli` | CLI tool for Minitap testing workflows |
+## Available Casks
 
-## Updates
-
-Formulae are automatically updated when new versions are released on PyPI.
+| Cask | Description |
+|------|-------------|
+| `minitest-connector` | Lets Minitest test devices reach apps inside your private network |
