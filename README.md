@@ -2,14 +2,12 @@
 
 Homebrew formulae and casks for [Minitap](https://github.com/minitap-ai) tools.
 
-## minitest-cli has moved to uv
+## minitest-cli is not published here
 
-`minitest-cli` is no longer published through Homebrew: the formula here is
-frozen at 0.24.0 and disabled. Install the current CLI with uv instead (it
-keeps itself up to date):
+`minitest-cli` is installed with uv, and keeps itself up to date:
 
 ```bash
-brew uninstall minitest-cli   # if you installed it from this tap
+brew uninstall minitest-cli   # if you installed an old version from this tap
 uv tool install minitest-cli
 ```
 
